@@ -1,0 +1,4 @@
+__pycache__/
+hand_landmarker.task
+hand_landmarker.task.part
+modele_lettres.joblib
