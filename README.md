@@ -1,4 +1,4 @@
-# Air Writing ✍️
+# Air Writing 
 
 Écrire dans l'air avec son doigt et une webcam : l'index est suivi en temps réel, son mouvement devient un tracé, puis un modèle d'apprentissage automatique reconnaît la lettre dessinée (A–Z, majuscules).
 
@@ -29,8 +29,8 @@ Le modèle de main MediaPipe (`hand_landmarker.task`) se télécharge tout seul 
 ## Utilisation
 
 ```bash
-python entrainer.py          # 1. entraîne le classifieur (~30 s)
-python air_writing.py        # 2. écris dans l'air !
+python entrainer.py          # 1. entraîne le classifieur 
+python air_writing.py        # 2. écris dans l'air 
 ```
 
 | Geste | Action |
@@ -45,9 +45,9 @@ Touches : `espace` reconnaître tout de suite, `c` effacer le tracé, `x` suppri
 ## Collecter de vrais gestes et évaluer
 
 ```bash
-python air_writing.py --collecte                  # toutes les lettres, 10 gestes chacune
+python air_writing.py --collecte                  
 python air_writing.py --collecte --lettres AEIOU --par-lettre 20
-python entrainer.py                               # réentraîne avec tes gestes
+python entrainer.py                               
 ```
 
 L'application demande les lettres une par une, en alternant (A, B, C... puis on recommence) pour avoir des gestes plus variés. `espace` enregistre le tracé, `c` recommence, `n` passe à une autre lettre. On peut arrêter et reprendre plus tard : les gestes s'accumulent dans `mes_gestes/` (tracé brut en JSON + image 28×28 en PNG).
